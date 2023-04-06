@@ -18,7 +18,6 @@ services:
       NODE_ENV: development
     volumes:
       - .:/sample_app
-      - bundle_volume:/usr/local/bundle
     ports:
       - 3000:3000
     tty: true
