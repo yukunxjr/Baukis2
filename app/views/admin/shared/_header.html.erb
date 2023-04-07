@@ -1,12 +1,13 @@
 <header>
-    <span class="logo-mark">BAUKIS2</span>
+    <%# <span class="logo-mark">BAUKIS2</span> %>
+    <%= link_to "BAUKIS2", :admin_root, class: "logo-mark" %>
     <%= content_tag(:span, flash.notice, class: "notice") if flash.notice %>
     <%= content_tag(:span, flash.alert, class: "alert") if flash.alert %>
     <%=
         if current_adimnstrator
-            link_to "ログアウト", :admin_session, method: :delete
+            link_to "ログアウト", :admin_session, method: :delete, id: "log"
         else
-            link_to "ログイン", :admin_login
+            link_to "ログイン", :admin_login, id: "log"
         end
     %>
 </header>

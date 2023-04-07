@@ -7,7 +7,7 @@ html,body {
     height: 100%;
 }
 
-div#wrpper {
+div#wrapper {
     position: relative;
     box-sizing: border-box;
     min-height: 100%;
@@ -40,5 +40,10 @@ footer {
 
 a{
     float: right;
+    color: $dark_gray;
+    margin-left: $wide; 
+}
+
+header #log {
     color: $very_light_gray;
 }
