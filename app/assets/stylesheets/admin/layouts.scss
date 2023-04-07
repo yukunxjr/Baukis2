@@ -20,8 +20,11 @@ header {
     padding: $moderate;
     background-color: $dark_magenta;
     color: $very_light_gray;
-    span.logo-mark {
+    a.logo-mark {
         font-weight: bold;
+        text-decoration: none;
+        float: none;
+        color: $very_light_gray;
     }
 }
 
@@ -38,7 +41,7 @@ footer {
     }
 }
 
-a{
+header #log {
     float: right;
     color: $very_light_gray;
 }

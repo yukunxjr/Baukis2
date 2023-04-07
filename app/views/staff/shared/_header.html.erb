@@ -4,9 +4,10 @@
     <%= content_tag(:span, flash.alert, class: "alert") if flash.alert %>
     <%=
         if current_staff_member
-            link_to "ログアウト", :staff_session, method: :delete
+            link_to "ログアウト", :staff_session, method: :delete, id: "log"
         else
-            link_to "ログイン", :staff_login
+            link_to "ログイン", :staff_login, id: "log"
         end
     %>
+    <%= link_to "アカウント", :staff_account, id: "log" if current_staff_member %>
 </header>
