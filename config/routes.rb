@@ -4,20 +4,21 @@ Rails.application.routes.draw do
   config = Rails.application.config.baukis2
 
 
-  # constraints host: "baukis2.example.com" do
-    namespace :staff, path: "" do
-      root "top#index"
-      get "login" => "sessions#new", as: :login
-      resource :session, only: [ :create, :destroy ]
-      resource :account, expect: [ :new, :create, :destroy ]
-    end
-  # end
+  namespace :staff, path: "" do
+    root "top#index"
+    get "login" => "sessions#new", as: :login
+    resource :session, only: [ :create, :destroy ]
+    resource :account, expect: [ :new, :create, :destroy ]
+  end
 
   namespace :admin do
     root "top#index"
     get "login" => "sessions#new", as: :login
     resource :session, only: [ :create, :destroy ]
-    resources :staff_members
+    resources :staff_members do
+      resources :staff_events, only: [:index]
+    end
+    resources :staff_events, only: [:index]
   end
 
   namespace :customer do
