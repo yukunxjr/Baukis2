@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get "login" => "sessions#new", as: :login
     resource :session, only: [ :create, :destroy ]
     resource :account, expect: [ :new, :create, :destroy ]
+    resource :password, only: [ :show, :edit, :update ]
   end
 
   namespace :admin do

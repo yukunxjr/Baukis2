@@ -1,17 +1,17 @@
 # require "rails_helper"
 
-# # describe "管理者によるログイン管理", "ログイン前" do
-# #   include_examples "a protected admin controller", "admin/staff_members"
-# # end
+# describe "管理者によるログイン管理", "ログイン前" do
+#   include_examples "a protected admin controller", "admin/staff_members"
+# end
 
 # describe "管理者による職員管理" do
-#   let(:administrator) { create(:administrator) }
+#   let(:adimnstrator) { create(:adimnstrator) }
 
 #   before do
 #     post admin_session_url,
 #       params: {
 #         admin_login_form: {
-#           email: administrator.email,
+#           email: adimnstrator.email,
 #           password: "pw"
 #         }
 #       }
@@ -24,7 +24,7 @@
 #     end
 
 #     example "停止フラグがセットされたら強制的にログアウト" do
-#       administrator.update_column(:suspended, true)
+#       adimnstrator.update_column(:suspended, true)
 #       get admin_staff_members_url
 #       expect(response).to redirect_to(admin_root_url)
 #     end
