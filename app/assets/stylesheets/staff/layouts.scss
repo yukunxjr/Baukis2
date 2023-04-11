@@ -23,6 +23,9 @@ header {
     span.logo-mark {
         font-weight: bold;
     }
+    a {
+        float: right;
+    }
 }
 
 footer {
@@ -39,7 +42,6 @@ footer {
 }
 
 a{
-    float: right;
     color: $dark_gray;
     margin-left: $wide; 
 }
