@@ -6,16 +6,16 @@ class CustomerPresenter < ModelPresenter
     end
   
     def full_name_kana
-      object.family_name_kana + " " + object.given_name
+      object.family_name_kana + " " + object.given_name_kana
     end
   
-    # def created_at
-    #   object.created_at.try(:strftime, "%Y/%m/%d %H:%M:%S")
-    # end
+    def created_at
+      object.created_at.try(:strftime, "%Y/%m/%d %H:%M:%S")
+    end
   
-    # def updated_at
-    #   object.updated_at.try(:strftime, "%Y/%m/%d %H:%M:%S")
-    # end
+    def updated_at
+      object.updated_at.try(:strftime, "%Y/%m/%d %H:%M:%S")
+    end
   
     def birthday
       return "" if object.birthday.blank?
