@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   namespace :customer do
     root "top#index"
+    get "login" => "sessions#new", as: :login
+    resource :session, only: [ :create, :destroy ]
   end
 
 
