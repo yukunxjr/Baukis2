@@ -1,6 +1,6 @@
 require "test_helper"
 
-class PhoneTest < ActiveSupport::TestCase
+class Staff::ProgramsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
