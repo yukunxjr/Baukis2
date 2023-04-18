@@ -11,7 +11,11 @@ Rails.application.routes.draw do
     resource :account, expect: [ :new, :create, :destroy ]
     resource :password, only: [ :show, :edit, :update ]
     resources :customers
-    resources :programs
+    resources :programs do
+      resource :entries, only: [] do
+        patch :update_all, on: :collection
+      end
+    end
   end
 
   namespace :admin do

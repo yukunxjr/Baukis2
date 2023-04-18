@@ -10,6 +10,7 @@ require("channels")
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import "../staff/customer_form.js";
+import "../staff/entries_form.js";
 
 Rails.start()
 Turbolinks.start()
