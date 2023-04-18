@@ -1,5 +1,5 @@
 class Program < ApplicationRecord
-  has_many :entries, dependent: :destroy
+  has_many :entries, dependent: :restrict_with_exception
   has_many :applicants, through: :entries, source: :customer
   belongs_to :registrant, class_name: "StaffMember"
 
@@ -76,6 +76,10 @@ class Program < ApplicationRecord
         min_number_of_participants > max_number_of_participants
       errors.add(:max_number_of_participants, :less_than_min_number)
     end
+  end
+
+  def deletable?
+    entries.empty?
   end
 
 end
