@@ -26,6 +26,7 @@ html, body {
     a {
       float: right;
       color: $very_light_gray;
+      margin-left: $wide;
     }
   }
   footer {
@@ -39,8 +40,4 @@ html, body {
       padding: $moderate;
       margin: 0;
     }
-  }
-
-  a {
-    text-decoration: none;
   }
