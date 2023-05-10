@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
           "customer"
         end
     end
+
+    private def reject_non_xhr
+      raise ActionController::BadRequest unless request.xhr?
+    end
 end
