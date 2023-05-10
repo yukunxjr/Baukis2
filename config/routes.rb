@@ -18,6 +18,10 @@ Rails.application.routes.draw do
         patch :update_all, on: :collection
       end
     end
+    get "messages/count" => "ajax#message_count"
+    resources :messages, only: [ :index, :show, :destroy ] do
+      get :inbound, :outbound, :deleted, on: :collection
+    end
   end
 
   namespace :admin do
@@ -41,6 +45,9 @@ Rails.application.routes.draw do
       resource :entry, only: [ :create ] do
         patch :cancel
       end
+    end
+    resources :messages, only: [ :new, :create ] do
+      post :confirm, on: :collection
     end
   end
 
