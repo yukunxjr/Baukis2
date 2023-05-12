@@ -12,6 +12,7 @@ import Turbolinks from "turbolinks"
 import "../staff/customer_form.js";
 import "../staff/entries_form.js";
 import "../staff/messages.js";
+import "../staff/tags.js";
 
 Rails.start()
 Turbolinks.start()

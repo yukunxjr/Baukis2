@@ -33,5 +33,4 @@ class Customer::MessagesController < Customer::Base
   private def customer_message_params
     params.require(:customer_message).permit(:subject, :body)
   end
-  
 end
